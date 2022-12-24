@@ -34,6 +34,18 @@ function MyAccount(props) {
         </div>
         <div>
           <span className="title">账号状态</span>
+          <div className="vipRule insuranceFunds">
+            <div>
+              <div>受保护中</div>
+              <div>
+                <Button type="link">补足保险资金</Button>
+              </div>
+            </div>
+            <div>
+              <span>配套资金：￥3150</span>
+              <span>剩余资金：￥2150</span>
+            </div>
+          </div>
           <div className="vipRule">
             <div>
               <div>VIP等级：普通VIP1</div>
