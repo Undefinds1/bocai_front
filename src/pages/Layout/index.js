@@ -1,5 +1,5 @@
 import { Switch, Route, useHistory, Redirect } from 'react-router-dom';
-import { Button, Dropdown, Layout, Menu } from 'antd';
+import { Button, Dropdown, Layout, Menu, Card } from 'antd';
 import styles from './index.module.scss';
 import User from '@/pages/User';
 import Right from './right';
@@ -8,7 +8,6 @@ import Vip from '@/pages/Vip';
 import Team from '@/pages/Team';
 import Settlement from '@/pages/Settlement';
 import routeOption from '@/utils/routeOption';
-import { useState } from 'react';
 import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import logo from '@/assets/logo.png';
 import _ from 'lodash';
@@ -25,15 +24,33 @@ const Routes = {
 export default function BigLayout(props) {
   const pathname = props.location.pathname;
   const history = useHistory();
-  const [collapsed, setCollapsed] = useState(false);
 
   let menuItem = [
     {
       key: '1',
       label: (
-        <span target="_blank" rel="noopener noreferrer">
-          右侧用户操作区
-        </span>
+        <Card className={styles.myUser}>
+          <div>
+            <UserOutlined fontSize={99} />
+            <span>10001@qq.com</span>
+          </div>
+          <div>
+            <Button>基本资料</Button>
+            <Button>实名认证</Button>
+            <Button>简体中文</Button>
+          </div>
+          <div>
+            <Button block>安全管控</Button>
+            <Button block>访问控制</Button>
+            <Button block>accesskeys</Button>
+            <Button block>会员权益</Button>
+            <Button block>推荐返利后台</Button>
+            <Button block>推荐返利后台</Button>
+          </div>
+          <div>
+            <Button block>退出管理控制台</Button>
+          </div>
+        </Card>
       ),
     },
   ];
@@ -61,6 +78,7 @@ export default function BigLayout(props) {
                 menu={{
                   items: menuItem,
                 }}
+                className="dropdown"
               >
                 <UserOutlined className="user" fontSize={88} />
               </Dropdown>
@@ -69,20 +87,13 @@ export default function BigLayout(props) {
         </Header>
         <Layout style={{ height: 'calc( 100vh - 64px )' }}>
           <Sider
-            collapsed={collapsed}
-            onCollapse={(e) => setCollapsed(e)}
-            width={200}
             className="site-layout-background"
             theme="light"
             collapsible
             defaultCollapsed
             trigger={
               <div className="triggerBox">
-                <Button
-                  size="large"
-                  onClick={() => setCollapsed((o) => !o)}
-                  className="menu"
-                >
+                <Button size="large" className="menu">
                   <MenuOutlined />
                 </Button>
               </div>
@@ -106,7 +117,7 @@ export default function BigLayout(props) {
             }}
           >
             <Switch>
-              <Redirect from="/" to="/CashierConfiguration" exact />
+              <Redirect from="/" to="/Home" exact />
               {routeOption.map(({ key }) => (
                 <Route key={key} path={key} component={Routes[key.slice(1)]} />
               ))}
