@@ -2,14 +2,24 @@ import { Switch, Route, useHistory, Redirect } from 'react-router-dom';
 import { Button, Dropdown, Layout, Menu } from 'antd';
 import styles from './index.module.scss';
 import User from '@/pages/User';
+import Right from './right';
+import Home from '@/pages/Home';
+import Vip from '@/pages/Vip';
+import Team from '@/pages/Team';
+import Settlement from '@/pages/Settlement';
 import routeOption from '@/utils/routeOption';
 import { useState } from 'react';
 import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import logo from '@/assets/logo.png';
 import _ from 'lodash';
 const { Header, Sider } = Layout;
-let Routes = {
+
+const Routes = {
   User,
+  Home,
+  Settlement,
+  Vip,
+  Team,
 };
 
 export default function BigLayout(props) {
@@ -21,13 +31,9 @@ export default function BigLayout(props) {
     {
       key: '1',
       label: (
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://www.antgroup.com"
-        >
-          1st menu item
-        </a>
+        <span target="_blank" rel="noopener noreferrer">
+          右侧用户操作区
+        </span>
       ),
     },
   ];
@@ -106,6 +112,7 @@ export default function BigLayout(props) {
               ))}
             </Switch>
           </Layout>
+          <Right />
         </Layout>
       </Layout>
     </div>

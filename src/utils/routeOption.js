@@ -28,7 +28,7 @@ const items = [
   },
   {
     label: '用户中心',
-    key: '/User ',
+    key: '/User',
     icon: <ApartmentOutlined />,
   },
 ];

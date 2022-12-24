@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card } from 'antd';
 
-function User(props) {
+function Settlement(props) {
   return (
     <Card>
-      <p>用户中心</p>
+      <p>理赔页面</p>
     </Card>
   );
 }
 
-export default User;
+export default Settlement;

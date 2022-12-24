@@ -17,8 +17,8 @@
     .menu {
       color: #fff !important;
       background-color: #ff6a00 !important;
-      width: 50px;
-      height: 64px;
+      width: 62px;
+      height: 62px;
 
     }
 
@@ -74,6 +74,32 @@
       align-items: center;
       width: 100%;
       flex: 0 1 40%;
+    }
+
+    .rightMenu {
+      padding: 15px;
+      width: 300px;
+
+      .noticeItem {
+        padding: 5px 0;
+      }
+
+      .online {
+        margin-top: 20px;
+        background-color: #fff3eb;
+        color: #ff6a49;
+        .onlineItem{
+          display: flex;
+          flex-direction: column;
+          >:nth-child(n){
+            margin: 5px 0;
+          }
+          .ant-btn{
+            color: #ff6a49;
+            border: 1px solid #ff6a49;
+          }
+        }
+      }
     }
   }
 }

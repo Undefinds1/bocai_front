@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card } from 'antd';
 
-function User(props) {
+function Vip(props) {
   return (
     <Card>
-      <p>用户中心</p>
+      <p>Vip</p>
     </Card>
   );
 }
 
-export default User;
+export default Vip;

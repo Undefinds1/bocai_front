@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card } from 'antd';
 
-function User(props) {
+function Team(props) {
   return (
     <Card>
-      <p>用户中心</p>
+      <p>团队</p>
     </Card>
   );
 }
 
-export default User;
+export default Team;
