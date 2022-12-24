@@ -1,0 +1,79 @@
+.layout {
+  :global {
+
+    .logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .triggerBox {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .menu {
+      color: #fff !important;
+      background-color: #ff6a00 !important;
+      width: 50px;
+      height: 64px;
+
+    }
+
+    .login-logo {
+      object-fit: fill;
+      margin-left: 64px;
+    }
+
+    .ant-layout-header {
+      padding: 0;
+      background-color: #ffffff;
+      height: 64px;
+    }
+
+    .Info {
+      float: right;
+      font-size: 16px;
+      padding-right: 80px;
+      color: #fff;
+    }
+
+    #components-layout-demo-top-side-2 .logo {
+      float: left;
+      width: 120px;
+      height: 31px;
+      margin: 16px 24px 16px 0;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .photoimg {
+      margin-right: 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .ant-menu {
+      >.ant-menu-item {
+        margin: 0;
+      }
+    }
+
+    .user {
+      color: #fff;
+      background-color: #999;
+      font-size: 30px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      flex: 0 1 40%;
+    }
+  }
+}

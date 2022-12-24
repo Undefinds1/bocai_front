@@ -1,0 +1,29 @@
+.login_PayLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  margin: auto;
+  height: 100vh;
+  background-image: url(https://api.paugram.com/wallpaper/);
+  background-size: 100% 100%;
+  :global {
+    .ant-form-item-label > label {
+      color: aqua;
+      font-weight: 700;
+    }
+  }
+}
+
+.logo{
+  width: 35vw;
+  height: 35vw;
+  :global{
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:fill;
+    }
+  }
+}
