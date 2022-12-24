@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Button, Card } from 'antd';
 
 function Rule(props) {
@@ -11,7 +10,5 @@ function Rule(props) {
     </Card>
   );
 }
-
-Rule.propTypes = {};
 
 export default Rule;
