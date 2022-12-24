@@ -2,6 +2,8 @@ import { Button, Card } from 'antd';
 import React from 'react';
 
 function MyAccount(props) {
+  let left = 2150 / 3150;
+  let right = 1 - left;
   return (
     <Card title="我的账户" extra={<Button type="link"> 资金记录</Button>}>
       {/* 账号余额 */}
@@ -34,7 +36,14 @@ function MyAccount(props) {
         </div>
         <div>
           <span className="title">账号状态</span>
-          <div className="vipRule insuranceFunds">
+          <div
+            className="vipRule insuranceFunds"
+            style={{
+              backgroundImage: `linear-gradient(120deg, #0070c0 ${
+                left * 100
+              }%, rgba(220, 220, 220, 0) ${right * 100}%)`,
+            }}
+          >
             <div>
               <div>受保护中</div>
               <div>
