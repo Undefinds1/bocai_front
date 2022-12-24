@@ -36,29 +36,32 @@
         margin-top: 20px;
 
         >:nth-child(n) {
-          margin-right:45px;
+          margin-right: 45px;
         }
-        
+
 
       }
 
-      .btns{
+      .btns {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         background-color: #f9f9f9;
-        >:nth-child(n){
+
+        >:nth-child(n) {
           display: flex;
           align-items: center;
         }
-        .round{
+
+        .round {
           width: 6px;
           height: 6px;
           border-radius: 50%;
           background-color: #02a7f0;
         }
       }
-      .vipRule{
+
+      .vipRule {
         margin-top: 20px;
         width: 100%;
         border: 2px solid #016fa0;
@@ -68,23 +71,62 @@
         padding: 5px;
         border-radius: 5px;
         font-size: 12px !important;
-        >:nth-child(1){
+
+        >:nth-child(1) {
           display: flex;
           align-items: center;
           flex-direction: column;
           justify-content: center;
-        
+
         }
-        >:nth-child(2){
-          >:nth-child(n){
+
+        >:nth-child(2) {
+          >:nth-child(n) {
             margin-right: 5px;
           }
         }
       }
     }
 
-    .ant-card{
+    .ant-card {
       margin-bottom: 20px;
+    }
+
+    .sites {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .ant-btn {
+        background-color: #ff6a00;
+        color: #fff;
+      }
+
+      >:nth-child(n) {
+        flex: 0 0 50%;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        >:nth-child(1) {
+          flex: 0 0 30%;
+
+          >:nth-child(1) {
+            margin-right: 5px;
+          }
+        }
+
+        >:nth-child(2) {
+          flex: 0 1 50%;
+
+          >:nth-child(n) {
+            margin-right: 10px;
+          }
+        }
+
+
+
+      }
     }
   }
 }
