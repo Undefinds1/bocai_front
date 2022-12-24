@@ -1,0 +1,90 @@
+.home {
+  :global {
+
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+
+      >:nth-child(-n+2) {
+        flex: 0 0 49%;
+        border-right: 1px solid #f2f2f2;
+        margin-right: 5px;
+      }
+
+      >:nth-child(2) {
+        border-right: 0;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .amount {
+        >:nth-child(2) {
+          font-size: 24px;
+        }
+
+        >:nth-child(2n-1) {
+          font-size: 12px;
+        }
+      }
+
+      .flexItem {
+        display: flex;
+        margin-top: 20px;
+
+        >:nth-child(n) {
+          margin-right:45px;
+        }
+        
+
+      }
+
+      .btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: #f9f9f9;
+        >:nth-child(n){
+          display: flex;
+          align-items: center;
+        }
+        .round{
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background-color: #02a7f0;
+        }
+      }
+      .vipRule{
+        margin-top: 20px;
+        width: 100%;
+        border: 2px solid #016fa0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px !important;
+        >:nth-child(1){
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+        
+        }
+        >:nth-child(2){
+          >:nth-child(n){
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .ant-card{
+      margin-bottom: 20px;
+    }
+  }
+}

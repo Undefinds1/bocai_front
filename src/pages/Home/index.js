@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card } from 'antd';
-
+import styles from './index.module.scss';
+import MyAccount from './myAccount';
+import MyTeam from './myTeam';
 function Home(props) {
   return (
-    <div>
-      <Card>
-        <p>主页</p>
-      </Card>
+    <div className={styles.home}>
+      <MyAccount />
+      <MyTeam />
     </div>
   );
 }
