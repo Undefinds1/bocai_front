@@ -13,12 +13,13 @@ const Register = (props) => {
     }
     setCountdown(60);
     timeId.current = setInterval(() => {
-      if (countdown <= 0) {
-        clearInterval(timeId.current);
-        setCountdown('再次获取验证码');
-        return;
-      }
-      setCountdown((o) => o - 1);
+      setCountdown((o) => {
+        if (o <= 0) {
+          clearInterval(timeId.current);
+          return '再次获取验证码';
+        }
+        return o - 1;
+      });
     }, 1000);
   };
 
