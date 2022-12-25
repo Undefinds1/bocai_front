@@ -57,7 +57,7 @@ const Login = (props) => {
             rules={[
               {
                 required: true,
-                message: '请输入登录密码!',
+                message: '请输入登录密码',
               },
             ]}
           >

@@ -40,7 +40,7 @@ const Register = (props) => {
         message.error(msg);
       }
     } else {
-      message.warning('您输入的账号密码格式不正确,请稍后重试!');
+      message.warning('您输入的账号密码格式不正确,请稍后重试');
     }
   };
 
@@ -65,7 +65,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请设置会员名! ',
+                message: '请设置会员名',
               },
             ]}
           >
@@ -78,7 +78,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请设置你的登录密码!',
+                message: '请设置你的登录密码',
               },
             ]}
           >
@@ -94,7 +94,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请再次输入你的登录密码!',
+                message: '请再次输入你的登录密码',
               },
             ]}
           >
@@ -110,7 +110,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请输入真实姓名!',
+                message: '请输入真实姓名',
               },
             ]}
           >
@@ -123,7 +123,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请输入手机号码!',
+                message: '请输入手机号码',
               },
             ]}
           >
@@ -139,7 +139,7 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请输入验证码!',
+                message: '请输入验证码',
               },
             ]}
           >
@@ -160,11 +160,11 @@ const Register = (props) => {
             rules={[
               {
                 required: true,
-                message: '请输入推荐人!',
+                message: '请输入推荐人账号',
               },
             ]}
           >
-            <Input placeholder="请输入推荐人" style={{ width: 388 }} />
+            <Input placeholder="请输入推荐人账号" style={{ width: 388 }} />
           </Form.Item>
 
           <Form.Item>
