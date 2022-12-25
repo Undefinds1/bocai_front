@@ -1,3 +1,8 @@
+html {
+  --themeColor: #004983;
+}
+
+
 /*里面的代码可以根据自己需求去进行更改*/
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
@@ -25,6 +30,11 @@
 body,
 html {
   font-size: 12px !important;
+  font-family: sans-serif !important;
+}
+
+div,span,h1,h2,h3,h4,h5,h6,p{
+  font-family: sans-serif !important;
 }
 
 .ant-btn {
@@ -40,3 +50,4 @@ html {
 .ant-card-head-title{
   font-weight: 700;
 }
+

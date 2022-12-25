@@ -17,11 +17,14 @@
       position: fixed;
       top: 0;
       left: 0;
+      .ant-btn{
+        border: 0;
+      }
     }
 
     .menu {
       color: #fff !important;
-      background-color: #ff6a00 !important;
+      background-color: var(--themeColor) !important;
       width: 60px;
       height: 60px;
 
@@ -87,12 +90,13 @@
 
       .noticeItem {
         padding: 5px 0;
+        cursor: pointer;
       }
 
       .online {
         margin-top: 20px;
         background-color: #fff3eb;
-        color: #ff6a49;
+        color: #003153;
 
         .onlineItem {
           display: flex;
@@ -104,8 +108,8 @@
 
 
           .ant-btn {
-            color: #ff6a49;
-            border: 1px solid #ff6a49;
+            color: var(--themeColor);
+            border: 1px solid var(--themeColor);
           }
         }
       }
