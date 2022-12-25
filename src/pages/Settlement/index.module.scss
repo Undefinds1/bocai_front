@@ -60,13 +60,29 @@
 
     }
 
-    .child{
-      .anticon{
+    .child {
+      .anticon {
         color: red;
       }
     }
-    .ruleTitle{
+
+    .ruleTitle {
       margin: 10px 0;
+    }
+
+    .recordTablle {
+      border-collapse: collapse;
+
+      th {
+        width: 130px;
+      }
+
+      tr {
+        text-align: center;
+      }
+      td{
+        word-break: break-word;
+      }
     }
   }
 
