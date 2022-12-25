@@ -3,6 +3,7 @@
     .ant-card {
       margin-bottom: 20px;
     }
+
     .content {
       display: flex;
       flex-wrap: wrap;
@@ -23,7 +24,7 @@
         font-size: 12px;
       }
 
-    
+
 
       .flexItem {
         display: flex;
@@ -46,16 +47,18 @@
 
     }
 
-    .myLink{
-      .ant-card-body{
+    .myLink {
+      .ant-card-body {
         display: flex;
         align-items: center;
         flex-direction: column;
         height: 180px;
-        >:nth-child(n){
+
+        >:nth-child(n) {
           margin-bottom: 25px;
         }
-        .ant-btn{
+
+        .ant-btn {
           background-color: var(--themeColor);
           color: #fff;
           border-radius: 20px;
@@ -63,11 +66,25 @@
       }
     }
 
-    .ruleImg{
+    .ruleImg {
       width: 400px;
-      height:150px;
+      height: 150px;
     }
-  
+
+    .subordinate {
+      .btns {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+        align-items: center;
+        margin: 25px 50px 15px 0;
+
+        >:nth-child(n) {
+          margin-right: 10px;
+        }
+      }
+    }
+
   }
 
 }

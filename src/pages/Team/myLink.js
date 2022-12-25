@@ -13,6 +13,7 @@ function MyLink(props) {
         <Col span={8}>
           <Card title="推荐二维码" bordered={false}>
             <img style={{ width: 100, height: 100 }} src="11" alt="" />
+            {/* <QRCode value="https://www.baidu.com/" /> */}
           </Card>
         </Col>
         <Col span={8}>
