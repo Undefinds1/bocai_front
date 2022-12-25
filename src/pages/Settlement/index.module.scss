@@ -1,5 +1,10 @@
 .settlement {
   :global {
+
+    .ant-card {
+      margin-bottom: 20px;
+    }
+
     .applyTitle {
       display: flex;
 
@@ -53,6 +58,15 @@
       }
 
 
+    }
+
+    .child{
+      .anticon{
+        color: red;
+      }
+    }
+    .ruleTitle{
+      margin: 10px 0;
     }
   }
 
