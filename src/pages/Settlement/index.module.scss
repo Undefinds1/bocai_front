@@ -1,0 +1,59 @@
+.settlement {
+  :global {
+    .applyTitle {
+      display: flex;
+
+      >:nth-child(n) {
+        margin-left: 10px;
+      }
+    }
+
+    .applyForm {
+
+      p {
+        font-weight: 700;
+      }
+
+      .tip {
+        display: flex;
+        justify-content: center;
+      }
+
+      .submit {
+        margin-left: 40px;
+
+        .ant-btn {
+          background-color: #ff6a00 !important;
+          color: #fff !important;
+          font-size: 18px !important;
+          border: 0;
+        }
+      }
+
+      .upload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        margin-top: 20px;
+
+        .ant-upload {
+          width: 150px;
+        }
+
+        .ant-upload-picture-card-wrapper {
+          width: auto;
+        }
+
+        >:nth-child(n) {
+          margin-left: 20px;
+        }
+
+
+      }
+
+
+    }
+  }
+
+}
