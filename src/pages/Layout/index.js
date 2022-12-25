@@ -12,6 +12,7 @@ import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import logo from '@/assets/logo.png';
 import _ from 'lodash';
 import Footer from '@/components/Footer';
+import Register from '@/pages/Register';
 const { Header, Sider } = Layout;
 
 const Routes = {
@@ -20,6 +21,7 @@ const Routes = {
   Settlement,
   Vip,
   Team,
+  Register,
 };
 
 export default function BigLayout(props) {
@@ -119,7 +121,13 @@ export default function BigLayout(props) {
           >
             <Switch>
               <Redirect from="/" to="/Home" exact />
-              {routeOption.map(({ key }) => (
+              {[
+                ...routeOption,
+                {
+                  label: '注册',
+                  key: '/Register',
+                },
+              ].map(({ key }) => (
                 <Route key={key} path={key} component={Routes[key.slice(1)]} />
               ))}
             </Switch>

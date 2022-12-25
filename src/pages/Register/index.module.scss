@@ -1,0 +1,82 @@
+.register {
+
+
+  :global {
+
+    .registerFrom{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .registerTitle {
+      position: relative;
+
+      .title {
+        font-weight: 700;
+        font-size: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .rightLogin {
+        position: absolute;
+        right: 0;
+        color: #666666;
+        font-size: 10px;
+        top: 0;
+
+        .ant-btn {
+          color: #00ccec;
+        }
+      }
+
+
+    }
+
+    .phone {
+      border-right: 1px solid #d9d9d9;
+      padding-right: 8px;
+    }
+
+    .sendCode{
+      padding-left: 8px;
+      border-left: 1px solid #d9d9d9;
+      cursor: pointer;
+    }
+
+    .submit {
+      font-size: 16px !important;
+      background-color: #00c1de;
+      color: #fff;
+      border: 0;
+      width: 388px !important;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: flex-end;
+
+      .ant-btn {
+        color: #999999;
+        padding: 0 3px;
+      }
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn {
+        background-color: #d7d7d7;
+        color: #000;
+        border: 0;
+        width: 180px;
+        border-radius: 20px;
+        font-size: 16px !important;
+      }
+    }
+  }
+}
