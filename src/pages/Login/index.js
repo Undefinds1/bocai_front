@@ -1,27 +1,12 @@
-import { Button, Form, Input, message } from 'antd';
-import React, { useEffect } from 'react';
+import { Button, Card, Form, Input, message } from 'antd';
+import React from 'react';
 import styles from './index.module.scss';
 import { login } from '@/api/user';
-import logo from '@/assets/logo.png';
-import { Settoken, Gettoken } from '@/utils/localStorage';
 import { SetAuth } from '@/utils/auth';
+import { UserOutlined, LockOutlined } from '@ant-design/icons';
+import Footer from '@/components/Footer';
 const Login = (props) => {
   const { history } = props;
-
-  const handleInit = async () => {
-    const key = Gettoken();
-    if (key) {
-      message.success('您已登录,欢迎使用！');
-      history.push('/');
-      return;
-    }
-  };
-
-  useEffect(() => {
-    handleInit();
-    // eslint-disable-next-line
-  }, []);
-
   const onFinish = async (values) => {
     const { userName, passWord } = values;
     const userNamePattern = /^[a-zA-Z0-9_-]{4,16}$/;
@@ -30,7 +15,6 @@ const Login = (props) => {
     if (result) {
       const { code, msg, key, auth } = await login(values);
       if (code === 1) {
-        Settoken(key);
         message.success(msg);
         if (+auth === 1) {
           SetAuth({ auth, key });
@@ -46,48 +30,78 @@ const Login = (props) => {
   };
 
   return (
-    <div className={styles.login_PayLayout}>
-      <div className={styles.logo}>
-        <img src={logo} alt="最稳定的三方系统" />
+    <div className={styles.login}>
+      <Card title="登录">
+        <Form onFinish={onFinish} autoComplete="off">
+          <Form.Item
+            label=""
+            name="userName"
+            rules={[
+              {
+                required: true,
+                message: '请输入登录账号',
+              },
+            ]}
+          >
+            <Input
+              placeholder="账号/手机号码"
+              style={{ width: 388 }}
+              prefix={<UserOutlined className="user" />}
+              allowClear
+            />
+          </Form.Item>
+
+          <Form.Item
+            label=""
+            name="passWord"
+            rules={[
+              {
+                required: true,
+                message: '请输入登录密码!',
+              },
+            ]}
+          >
+            <Input.Password
+              placeholder="请输入登录密码"
+              prefix={<LockOutlined className="user" />}
+              style={{ width: 388 }}
+            />
+          </Form.Item>
+
+          <Form.Item>
+            <Button
+              className="submit"
+              size="large"
+              type="primary"
+              block
+              htmlType="submit"
+            >
+              登录
+            </Button>
+          </Form.Item>
+
+          <Form.Item className="btns">
+            <Button type="link">忘记密码</Button>
+            <Button type="link">忘记用户名</Button>
+            <Button
+              type="link"
+              onClick={() => {
+                history.push('/register');
+              }}
+            >
+              免费注册
+            </Button>
+          </Form.Item>
+          <Form.Item className="contact">
+            <Button size="large" block type="primary">
+              联系客服
+            </Button>
+          </Form.Item>
+        </Form>
+      </Card>
+      <div className="footer">
+        <Footer />
       </div>
-      <Form onFinish={onFinish} autoComplete="off">
-        <Form.Item
-          label="账号"
-          name="userName"
-          rules={[
-            {
-              required: true,
-              message: '请输入登录账号',
-            },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="密码"
-          name="passWord"
-          rules={[
-            {
-              required: true,
-              message: '请输入登录密码!',
-            },
-          ]}
-        >
-          <Input.Password />
-        </Form.Item>
-
-        <Form.Item
-          wrapperCol={{
-            offset: 8,
-            span: 16,
-          }}
-        >
-          <Button type="primary" htmlType="submit">
-            进入
-          </Button>
-        </Form.Item>
-      </Form>
     </div>
   );
 };
