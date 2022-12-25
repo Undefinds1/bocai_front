@@ -11,6 +11,7 @@ import routeOption from '@/utils/routeOption';
 import { MenuOutlined, UserOutlined } from '@ant-design/icons';
 import logo from '@/assets/logo.png';
 import _ from 'lodash';
+import Footer from '@/components/Footer';
 const { Header, Sider } = Layout;
 
 const Routes = {
@@ -122,6 +123,7 @@ export default function BigLayout(props) {
                 <Route key={key} path={key} component={Routes[key.slice(1)]} />
               ))}
             </Switch>
+            <Footer />
           </Layout>
           <Right />
         </Layout>

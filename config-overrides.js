@@ -2,7 +2,7 @@ const path = require('path');
 const {
   override,
   addWebpackAlias,
-  addWebpackExternals,
+  // addWebpackExternals,
   // addWebpackPlugin,
 } = require('customize-cra');
 // const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -13,14 +13,14 @@ const webpackAlias = addWebpackAlias({
 
 // Cdn配置
 module.exports = override(
-  webpackAlias,
-  addWebpackExternals({
-    react: 'React',
-    'react-dom': 'ReactDOM',
-    'react-router-dom': 'ReactRouterDOM',
-    axios: 'axios',
-    antd: 'antd',
-    dayjs: 'dayjs',
-  })
+  webpackAlias
+  // addWebpackExternals({
+  //   react: 'React',
+  //   'react-dom': 'ReactDOM',
+  //   'react-router-dom': 'ReactRouterDOM',
+  //   axios: 'axios',
+  //   antd: 'antd',
+  //   dayjs: 'dayjs',
+  // })
   // addWebpackPlugin(new BundleAnalyzerPlugin({ analyzerMode: 'static' }))
 );
