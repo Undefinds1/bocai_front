@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card } from 'antd';
-
+import Myteam from './myTeam';
+import styles from './index.module.scss';
 function Team(props) {
   return (
-    <Card>
-      <p>团队</p>
-    </Card>
+    <div className={styles.team}>
+      <Myteam />
+    </div>
   );
 }
 
